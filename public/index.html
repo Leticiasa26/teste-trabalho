@@ -20,14 +20,25 @@
         }
 
         h1 {
+
             color: goldenrod;
             align-items: center;
+
         }
 
         input {
 
             border-color:goldenrod;
             border-radius: 3px;
+
+        }
+
+        form {
+
+            align-items: center;
+            flex-direction: column;
+            display: flex;
+         
         }
 
     </style>
@@ -37,7 +48,9 @@
 <body>
 
     <h1> Cadastrar Filme </h1>
- 
+
+    <form onsubmit="event.preventDefault();trataform()">
+    
     <label for = "name" > Nome do Filme </label>
 
     <input type = "text" >
@@ -57,10 +70,17 @@
     <option value = "Animação" ></option>
     <option value = "Biografia" ></option>
     <option value = "Comédia" ></option>
+    <option value = "Comédia Romântica" ></option>
+    <option value = "Documentário" ></option>
+    <option value = "Drama" ></option>
+    <option value = "Fantasia" ></option>
+    <option value = "Ficção Científica" ></option>
+    <option value = "Histórico" ></option>
+    <option value = "Musical" ></option>
+    <option value = "Religioso" ></option>
     <option value = "Romance" ></option>
+    <option value = "Suspense" ></option>
     <option value = "Terror" ></option>
-
-    
 
     </datalist>
 
@@ -80,9 +100,22 @@
 
     <input type = "text" >
 
+    </form>
+
     <p></p>
 
     <input type="button" value="Cadastrar">
+
+    <script>
+
+    async function trataform () {
+
+         const inputName= document.getElementById ( "name" )
+         const name = inputName.value
+         
+    }
+
+    </script>
     
 </body>
 
